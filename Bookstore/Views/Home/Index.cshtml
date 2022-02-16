@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Catalog";
+}
+
+@model BooksViewModel
+
+<div class="container">
+    <h1 class="text-center my-4">Book Catalog</h1>
+
+    @foreach (Book book in Model.Books)
+    {
+        <div class="card my-2 p-2">
+            <div class="row align-items-center">
+                <div class="col-6 px-5">
+                    <h2 class="card-title">@book.Title</h2>
+                    <h5 class="card-subtitle text-muted">@book.Author</h5>
+                </div>
+                <div class="col">
+                    <h6>Publisher: @book.Publisher</h6>
+                    <h6>ISBN: @book.Isbn</h6>
+                    <h6>Classification: @book.Classification</h6>
+                    <h6>Number of Pages: @book.PageCount</h6>
+                    <h6>Price: $@book.Price</h6>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+<div class="container">
+    <div page-nav="@Model.PageInfo" page-action="Index"></div>
+</div>
