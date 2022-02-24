@@ -21,7 +21,7 @@ namespace Bookstore.Controllers
             _repo = repo;
         }
 
-        public IActionResult Index(int pageNum = 1)
+        public IActionResult Index(string category, int pageNum = 1)
         {
             int booksPerPage = 10;
             int booksToSkip = (pageNum - 1) * booksPerPage;
@@ -29,13 +29,17 @@ namespace Bookstore.Controllers
             var viewModel = new BooksViewModel
             {
                 Books = _repo.Books
-                .OrderBy(b => b.Author)
+                .Where(b => category == null || b.Category == category)
+                .OrderBy(b => b.Title)
                 .Skip(booksToSkip)
                 .Take(booksPerPage),
 
                 PageInfo = new PageInfo
                 {
-                    TotalNumBooks = _repo.Books.Count(),
+                    TotalNumBooks =
+                        (category == null
+                            ? _repo.Books.Count()
+                            : _repo.Books.Where(x => x.Category == category).Count()),
                     BooksPerPage = booksPerPage,
                     CurrentPage = pageNum
                 }
