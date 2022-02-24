@@ -33,8 +33,15 @@ using Bookstore.Models.ViewModels;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 6 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Views/_ViewImports.cshtml"
+using Bookstore.Infrastructure;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ecc4d2bcad30a6aee551879bc7e7094ebb4184d", @"/Views/Shared/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"841659c14ce4798898c7bf155f9f793c550faca1", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a3d932529b04897f0ca10476a2e5a21a0b88876", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Error : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<ErrorViewModel>
     {
         #pragma warning disable 1998

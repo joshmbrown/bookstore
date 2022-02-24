@@ -1,0 +1,46 @@
+﻿@page
+@model Bookstore.Pages.CartModel
+@{
+    Thread.CurrentThread.CurrentCulture = new CultureInfo("es-US");
+}
+
+
+
+<h1 class="text-center">Your Cart</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var i in Model.cart.Items)
+        {
+        <tr>
+            <td>@i.Book.Title</td>
+            <td>@i.Book.Author</td>
+            <td>@i.Price.ToString("C")</td>
+            <td>@i.Quantity.ToString()</td>
+            <td>@((i.Price * i.Quantity).ToString("C"))</td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr class="font-weight-bold">
+            <td>Total Books: @Model.cart.CalculateTotalBooks().ToString()</td>
+            <td></td>
+            <td></td>
+            <td>Total Price: </td>
+            <td>@Model.cart.CalculateTotalPrice().ToString("C")</td>
+        </tr>
+    </tfoot>
+</table>
+
+<div>
+    <a class="btn btn-secondary" href="@Model.ReturnURL">Continue Shopping</a>
+</div>
