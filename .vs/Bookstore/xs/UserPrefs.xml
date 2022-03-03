@@ -1,29 +1,11 @@
 ﻿<Properties StartupConfiguration="{F832D390-7B4F-40B4-ABCD-BCB270F8CDC7}|Default">
   <MonoDevelop.Ide.ItemProperties.Bookstore PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bookstore/Pages/Cart.cshtml">
-    <Files>
-      <File FileName="Bookstore/Views/Shared/BookSummary.cshtml" Line="23" Column="100" />
-      <File FileName="Bookstore/Pages/Cart.cshtml" Line="12" Column="11" />
-      <File FileName="Bookstore/Pages/Cart.cshtml.cs" />
-      <File FileName="Bookstore/Pages/_Layout.cshtml" />
-      <File FileName="Bookstore/Views/Shared/_Layout.cshtml" />
-      <File FileName="Bookstore/Pages/_ViewImports.cshtml" />
-      <File FileName="Bookstore/Pages/_ViewStart.cshtml" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bookstore" expanded="True">
-            <Node name="Bookstore" expanded="True">
-              <Node name="Infrastructure" expanded="True" />
-              <Node name="Models" expanded="True" />
-              <Node name="Pages" expanded="True">
-                <Node name="Cart.cshtml" expanded="True" selected="True" />
-              </Node>
-              <Node name="Views" expanded="True">
-                <Node name="Shared" expanded="True" />
-              </Node>
-            </Node>
+            <Node name="Bookstore" expanded="True" />
           </Node>
         </State>
       </Pad>

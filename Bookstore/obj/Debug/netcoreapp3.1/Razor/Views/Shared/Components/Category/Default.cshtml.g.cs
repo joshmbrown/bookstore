@@ -40,8 +40,22 @@ using Bookstore.Infrastructure;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 7 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Views/_ViewImports.cshtml"
+using System.Globalization;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 8 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Views/_ViewImports.cshtml"
+using System.Threading;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ba421a936a596b6b440f55051a27f81182b17889", @"/Views/Shared/Components/Category/Default.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9a3d932529b04897f0ca10476a2e5a21a0b88876", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ee7fb15eb58b56b538c121efd167f7d7ca689e7a", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_Components_Category_Default : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<string>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-controller", "Home", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -85,7 +99,7 @@ using Bookstore.Infrastructure;
 #line hidden
 #nullable disable
             WriteLiteral("        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba421a936a596b6b440f55051a27f81182b178895527", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba421a936a596b6b440f55051a27f81182b178895899", async() => {
 #nullable restore
 #line 14 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Views/Shared/Components/Category/Default.cshtml"
                                                                                                            Write(cat);
@@ -149,7 +163,7 @@ AddHtmlAttributeValue(" ", 287, ViewBag.SelectedCategory == cat ? "btn-secondary
 #line hidden
 #nullable disable
             WriteLiteral("\n    <br />\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba421a936a596b6b440f55051a27f81182b178899610", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ba421a936a596b6b440f55051a27f81182b178899982", async() => {
                 WriteLiteral("Clear Filters");
             }
             );

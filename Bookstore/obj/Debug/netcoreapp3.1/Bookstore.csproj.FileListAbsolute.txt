@@ -81,3 +81,6 @@
 /Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/obj/Debug/netcoreapp3.1/Bookstore.dll
 /Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/obj/Debug/netcoreapp3.1/Bookstore.pdb
 /Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/obj/Debug/netcoreapp3.1/Bookstore.genruntimeconfig.cache
+/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/obj/Debug/netcoreapp3.1/Razor/Views/Checkout/Checkout.cshtml.g.cs
+/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/obj/Debug/netcoreapp3.1/Razor/Pages/Confirmation.cshtml.g.cs
+/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Components/CartSummary/Default.cshtml.g.cs

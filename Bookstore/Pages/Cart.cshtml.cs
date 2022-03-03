@@ -13,17 +13,17 @@ namespace Bookstore.Pages
     {
         private IBookstoreRepository _repo { get; set; }
 
-        public CartModel (IBookstoreRepository repo)
-        {
-            _repo = repo;
-        }
-
         public Cart cart { get; set; }
         public string ReturnURL { get; set; }
 
+        public CartModel (IBookstoreRepository repo, Cart c)
+        {
+            _repo = repo;
+            cart = c;
+        }
+
         public void OnGet(string returnURL)
         {
-            cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
             ReturnURL = returnURL ?? "/";
         }
 
@@ -31,10 +31,14 @@ namespace Bookstore.Pages
         {
             Book book = _repo.Books.FirstOrDefault(x => x.BookId == bookID);
 
-            Cart cart = HttpContext.Session.GetJson<Cart>("cart") ?? new Cart();
             cart.AddItem(book, 1);
 
-            HttpContext.Session.SetJson("cart", cart);
+            return RedirectToPage(new { ReturnURL = returnURL });
+        }
+
+        public IActionResult OnPostRemove(int bookID, string returnURL)
+        {
+            cart.RemoveItem(cart.Items.First(x => x.Book.BookId == bookID).Book);
 
             return RedirectToPage(new { ReturnURL = returnURL });
         }

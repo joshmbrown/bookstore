@@ -16,6 +16,7 @@
             <th>Unit Price</th>
             <th>Quantity</th>
             <th>Subtotal</th>
+            <th class="text-center">Remove Item</th>
         </tr>
     </thead>
     <tbody>
@@ -24,9 +25,19 @@
         <tr>
             <td>@i.Book.Title</td>
             <td>@i.Book.Author</td>
-            <td>@i.Price.ToString("C")</td>
+            <td>@i.Book.Price.ToString("C")</td>
             <td>@i.Quantity.ToString()</td>
-            <td>@((i.Price * i.Quantity).ToString("C"))</td>
+            <td>@((i.Book.Price * i.Quantity).ToString("C"))</td>
+
+            <td class="text-center">
+                <form method="post" asp-page-handler="Remove">
+                    <input type="hidden" name="bookID" value="@i.Book.BookId" />
+                    <input type="hidden" name="returnURL" value="@Model.ReturnURL" />
+                    <button class="btn btn-sm btn-danger" type="submit">
+                        Remove
+                    </button>
+                </form>
+            </td>
         </tr>
         }
     </tbody>
@@ -35,12 +46,14 @@
             <td>Total Books: @Model.cart.CalculateTotalBooks().ToString()</td>
             <td></td>
             <td></td>
+            <td></td>
             <td>Total Price: </td>
-            <td>@Model.cart.CalculateTotalPrice().ToString("C")</td>
+            <td class="text-center">@Model.cart.CalculateTotalPrice().ToString("C")</td>
         </tr>
     </tfoot>
 </table>
 
 <div>
-    <a class="btn btn-secondary" href="@Model.ReturnURL">Continue Shopping</a>
+    <a class="btn btn-primary float-right ml-2" asp-controller="Checkout" asp-action="Checkout">Checkout</a>
+    <a class="btn btn-secondary float-right" href="@Model.ReturnURL">Continue Shopping</a>
 </div>
