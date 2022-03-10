@@ -12,7 +12,6 @@ namespace Bookstore.Infrastructure
     public class PaginationTagHelper : TagHelper
     {
         private IUrlHelperFactory _uhf;
-
         public PaginationTagHelper (IUrlHelperFactory uhf)
         {
             _uhf = uhf;
@@ -21,7 +20,6 @@ namespace Bookstore.Infrastructure
         [ViewContext]
         [HtmlAttributeNotBound]
         public ViewContext vc { get; set; }
-
         public PageInfo PageNav { get; set; }
         public string PageAction { get; set; }
 

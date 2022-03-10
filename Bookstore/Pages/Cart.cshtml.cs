@@ -12,7 +12,6 @@ namespace Bookstore.Pages
     public class CartModel : PageModel
     {
         private IBookstoreRepository _repo { get; set; }
-
         public Cart cart { get; set; }
         public string ReturnURL { get; set; }
 
@@ -30,7 +29,6 @@ namespace Bookstore.Pages
         public IActionResult OnPost(int bookID, string returnURL)
         {
             Book book = _repo.Books.FirstOrDefault(x => x.BookId == bookID);
-
             cart.AddItem(book, 1);
 
             return RedirectToPage(new { ReturnURL = returnURL });

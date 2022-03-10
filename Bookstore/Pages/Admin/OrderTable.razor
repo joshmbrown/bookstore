@@ -1,0 +1,70 @@
+﻿<table class="table table-sm table-striped table-bordered">
+    <thead>
+        <tr>
+            <th colspan="6" class="text-center bg-dark text-white align-middle"><h4>@TableTitle</h4></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @if (Orders?.Count() > 0)
+        {
+            @foreach (Checkout o in Orders)
+            {
+                <tr>
+                    <th>User</th>
+                    <th>Name</th>
+                    <td class="align-middle text-center">
+                        <button class="btn btn-sm btn-danger" @onclick="@(x => OrdersSelected.InvokeAsync(o.CheckoutID))">
+                            @ButtonLabel
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="align-middle">@o.UserName</td>
+                    <td class="align-middle">@o.FirstName @o.LastName</td>
+                </tr>
+                <tr>
+                    <th class="align-middle">Book</th>
+                    <th class="align-middle">Quantity</th>
+                    <th class="align-middle">Price</th>
+                </tr>
+
+                @foreach (CartLineItem cli in o.LineItems)
+                {
+                    <tr>
+                        <td class="align-middle">@cli.Book.Title</td>
+                        <td class="align-middle">@cli.Quantity</td>
+                        <td class="align-middle">@cli.Book.Price.ToString("C")</td>
+                    </tr>
+                }
+
+                <tr>
+                    <td colspan="3" class="bg-dark"></td>
+                </tr>
+
+            }
+        }
+        else
+        {
+            <tr>
+                <th colspan="6" class="text-center">No Orders</th>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    [Parameter]
+    public string TableTitle { get; set; } = "Orders";
+
+    [Parameter]
+    public IEnumerable<Checkout> Orders { get; set; }
+
+    [Parameter]
+    public string ButtonLabel { get; set; } = "Shipped";
+
+    [Parameter]
+    public EventCallback<int> OrdersSelected { get; set; }
+}

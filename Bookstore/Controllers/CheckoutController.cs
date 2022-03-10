@@ -13,19 +13,20 @@ namespace Bookstore.Controllers
     {
         private ICheckoutRepository _repo { get; set; }
         private Cart _cart { get; set; }
-
         public CheckoutController(ICheckoutRepository repo, Cart cart)
         {
             _repo = repo;
             _cart = cart;
         }
 
+        // View the checkout screen
         [HttpGet]
         public IActionResult Checkout()
         {
             return View(new Checkout());
         }
 
+        // Checkout the cart
         [HttpPost]
         public IActionResult Checkout(Checkout checkout)
         {
