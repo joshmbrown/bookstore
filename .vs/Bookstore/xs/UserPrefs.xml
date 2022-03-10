@@ -1,11 +1,24 @@
 ﻿<Properties StartupConfiguration="{F832D390-7B4F-40B4-ABCD-BCB270F8CDC7}|Default">
   <MonoDevelop.Ide.ItemProperties.Bookstore PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bookstore/Pages/Admin/AdminLayout.razor">
+    <Files>
+      <File FileName="Bookstore/Pages/Admin/Details.razor" Line="3" Column="19" />
+      <File FileName="Bookstore/Pages/Admin/Editor.razor" Line="10" Column="19" />
+      <File FileName="Bookstore/Pages/Admin/AdminLayout.razor" Line="4" Column="2" />
+      <File FileName="Bookstore/Pages/Admin/OrderTable.razor" Line="38" Column="79" />
+      <File FileName="Bookstore/Pages/Admin/Orders.razor" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bookstore" expanded="True">
-            <Node name="Bookstore" expanded="True" />
+            <Node name="Bookstore" expanded="True">
+              <Node name="Pages" expanded="True">
+                <Node name="Admin" expanded="True">
+                  <Node name="AdminLayout.razor" selected="True" />
+                </Node>
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>

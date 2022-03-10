@@ -14,18 +14,20 @@ namespace Bookstore.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private IBookstoreRepository _repo;
-
         public HomeController(ILogger<HomeController> logger, IBookstoreRepository repo)
         {
             _logger = logger;
             _repo = repo;
         }
 
+        // View Index page
         public IActionResult Index(string category, int pageNum = 1)
         {
+            // Set how many books to view in pagination
             int booksPerPage = 10;
             int booksToSkip = (pageNum - 1) * booksPerPage;
 
+            // Create ViewModel of Books and PageInfo 
             var viewModel = new BooksViewModel
             {
                 Books = _repo.Books
@@ -48,6 +50,7 @@ namespace Bookstore.Controllers
             return View(viewModel);
         }
 
+        // View Error page
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

@@ -7,7 +7,6 @@ namespace Bookstore.Models
     public class EFCheckoutRepository : ICheckoutRepository
     {
         private BookstoreContext _context;
-
         public EFCheckoutRepository(BookstoreContext context)
         {
             _context = context;
