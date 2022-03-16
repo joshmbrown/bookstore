@@ -1,5 +1,8 @@
 ﻿@page "/admin/orders"
 @inherits OwningComponentBase<ICheckoutRepository>
+@{
+    Thread.CurrentThread.CurrentCulture = new CultureInfo("es-US");
+}
 
 <h3 class="bg-light rounded p-3" style="border: solid gray 1px;">
     Orders

@@ -1,0 +1,45 @@
+﻿@{
+    Layout = null;
+}
+
+@model LoginModel
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <title>Bookstore Login</title>
+    </head>
+    <body>
+        <h3 class="bg-dark text-white text-center p-3">Administrative Login</h3>
+
+        <div class="container">
+            <div class="container-fluid m-1 p-1">
+                <div class="text-danger" asp-validation-summary="All"></div>
+
+                <form method="post" asp-controller="Account" asp-action="Login">
+                    <div class="form-group">
+                        <label asp-for="Username">Username:</label>
+                        <input asp-for="Username" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Password">Password:</label>
+                        <input asp-for="Password" class="form-control" type="password" />
+                    </div>
+
+                    <button class="btn btn-primary" type="submit">Login</button>
+                    <a class="btn btn-secondary" href="/">Cancel</a>
+                    <input type="hidden" asp-for="ReturnUrl" />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
