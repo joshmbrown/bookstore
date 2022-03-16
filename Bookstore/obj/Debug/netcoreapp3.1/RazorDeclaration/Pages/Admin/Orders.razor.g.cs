@@ -10,7 +10,6 @@ namespace Bookstore.Pages.Admin
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Threading.Tasks;
 #nullable restore
 #line 1 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Pages/Admin/_Imports.razor"
 using Microsoft.AspNetCore.Components;
@@ -67,6 +66,13 @@ using System.Threading;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 9 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Pages/Admin/_Imports.razor"
+using System.Threading.Tasks;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin/orders")]
     public partial class Orders : OwningComponentBase<ICheckoutRepository>
     {
@@ -76,7 +82,7 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 25 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Pages/Admin/Orders.razor"
+#line 28 "/Users/joshbrown/Desktop/IS Core/IS 413/Bookstore/Bookstore/Pages/Admin/Orders.razor"
        
 
     public ICheckoutRepository repo => Service;

@@ -1,22 +1,40 @@
 ﻿<Properties StartupConfiguration="{F832D390-7B4F-40B4-ABCD-BCB270F8CDC7}|Default">
   <MonoDevelop.Ide.ItemProperties.Bookstore PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Bookstore/Pages/Admin/AdminLayout.razor">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Bookstore/Controllers/AccountController.cs">
     <Files>
-      <File FileName="Bookstore/Pages/Admin/Details.razor" Line="3" Column="19" />
-      <File FileName="Bookstore/Pages/Admin/Editor.razor" Line="10" Column="19" />
-      <File FileName="Bookstore/Pages/Admin/AdminLayout.razor" Line="4" Column="2" />
-      <File FileName="Bookstore/Pages/Admin/OrderTable.razor" Line="38" Column="79" />
-      <File FileName="Bookstore/Pages/Admin/Orders.razor" Line="1" Column="1" />
+      <File FileName="Bookstore/Views/Account/Login.cshtml" Line="38" Column="50" />
+      <File FileName="Bookstore/Models/IdentitySeedData.cs" />
+      <File FileName="Bookstore/Pages/Admin/Books.razor" />
+      <File FileName="Bookstore/Pages/Admin/Details.razor" />
+      <File FileName="Bookstore/Pages/Admin/Editor.razor" />
+      <File FileName="Bookstore/Pages/Admin/Orders.razor" />
+      <File FileName="Bookstore/Pages/Admin/OrderTable.razor" />
+      <File FileName="Bookstore/Pages/Admin/Routed.razor" Line="11" Column="10" />
+      <File FileName="Bookstore/Views/Shared/Components/CartSummary/Default.cshtml" Line="16" Column="25" />
+      <File FileName="Bookstore/Controllers/AccountController.cs" Line="48" Column="43" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Bookstore" expanded="True">
             <Node name="Bookstore" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="AccountController.cs" selected="True" />
+              </Node>
+              <Node name="Models" expanded="True" />
               <Node name="Pages" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="AdminLayout.razor" selected="True" />
+                <Node name="Admin" expanded="True" />
+              </Node>
+              <Node name="Views" expanded="True">
+                <Node name="Account" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="Components" expanded="True">
+                    <Node name="CartSummary" expanded="True" />
+                  </Node>
                 </Node>
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="img" expanded="True" />
               </Node>
             </Node>
           </Node>
